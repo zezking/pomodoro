@@ -1,15 +1,46 @@
 body {
   background-color: #292f56;
-  padding: 4.375rem 3.125rem;
 }
 
-h1 {
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+button i {
+  color: #c4c4c4;
+}
+
+button:focus {
+  outline: none;
+}
+
+.pomodoro {
+  padding: 4.375rem 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pomodoro h1 {
   font-size: 5rem;
 }
 
-h1,
-h2,
-h3 {
+.pomodoro h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+.pomodoro h1,
+.pomodoro h2 {
   color: #e7ebfd;
 }
 
@@ -31,7 +62,8 @@ h3 {
 
 .navigation a {
   font-size: 0.7rem;
-  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
   color: #797d96;
   text-decoration: none;
   border-radius: 60px;
@@ -50,33 +82,7 @@ h3 {
   color: #151932;
 }
 
-.pause {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #e7ebfd;
-  letter-spacing: 14px;
-  margin-left: 0.8rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-button i {
-  color: #c4c4c4;
-}
-
-button:focus {
-  outline: none;
-}
-
-.pomodoro {
+.clockPanel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,8 +90,28 @@ button:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 18.75rem;
+  width: 18.75rem;
+  border: 1.5625rem solid #151932;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.pause {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  color: #e7ebfd;
+  letter-spacing: 14px;
+  margin-left: 0.8rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
