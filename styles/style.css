@@ -1,5 +1,5 @@
 body {
-  background-color: #292f56;
+  background-color: #212545;
 }
 
 button {
@@ -17,7 +17,6 @@ button:focus {
 }
 
 .pomodoro {
-  padding: 4.375rem 3.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,6 +30,7 @@ button:focus {
 }
 
 .pomodoro h1 {
+  margin: 0;
   font-size: 5rem;
 }
 
@@ -58,6 +58,7 @@ button:focus {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 60px;
+  margin-bottom: 3.125rem;
 }
 
 .navigation a {
@@ -83,16 +84,12 @@ button:focus {
 }
 
 .clockPanel {
+  margin: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   height: 18.75rem;
   width: 18.75rem;
-  border: 1.5625rem solid #151932;
   border-radius: 50%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -100,6 +97,30 @@ button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 6.25rem;
+  background: -webkit-linear-gradient(left top, #0f1224 0%, #323767 100%);
+  -webkit-box-shadow: -20px -20px 50px -30px rgba(255, 255, 255, 0.19);
+  box-shadow: -20px -20px 50px -30px rgba(255, 255, 255, 0.19);
+}
+
+.clockPanel .innerPanel {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 16.5625rem;
+  width: 16.5625rem;
+  border-radius: 50%;
+  background-color: #151932;
 }
 
 .pause {
