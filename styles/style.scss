@@ -1,0 +1,82 @@
+$LtBlue: hsl(233, 35%, 25%);
+$DkBlue: hsl(232, 41%, 14%);
+$LtGreyBlue: hsl(231, 12%, 53%);
+$grBlue: hsl(229, 85%, 95%);
+$LtGrey: hsl(0, 0%, 77%);
+$pink: hsl(0, 91%, 71%);
+$paddingY: 3.125rem;
+$paddingX: 4.375rem;
+
+$html-font-size: 16px;
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+@function rem($pxValue) {
+  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+body {
+  background-color: $LtBlue;
+  padding: $paddingX $paddingY;
+}
+h1 {
+  font-size: 5rem;
+}
+h1,
+h2,
+h3 {
+  color: $grBlue;
+}
+
+.navigation {
+  display: flex;
+  background: $DkBlue;
+  width: 20rem;
+  height: 3.75rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  a {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: $LtGreyBlue;
+    text-decoration: none;
+    border-radius: 60px;
+    padding: rem(14px) rem(16px);
+    transition: background-color 300ms;
+    &:visited {
+      color: none;
+    }
+    &:hover {
+      background-color: $pink;
+      opacity: 1;
+      color: $DkBlue;
+    }
+  }
+}
+
+.pause {
+  display: flex;
+  color: $grBlue;
+  letter-spacing: 14px;
+  margin-left: 0.8rem;
+  justify-content: center;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  i {
+    color: $LtGrey;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.pomodoro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
