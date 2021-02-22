@@ -14,6 +14,19 @@ $html-font-size: 16px;
 @function rem($pxValue) {
   @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
 }
+h1 {
+  margin: 0;
+  font-size: 5rem;
+}
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  margin: 0;
+}
+h1,
+h2 {
+  color: $grBlue;
+}
 body {
   background-color: $LtBlue;
 }
@@ -30,21 +43,14 @@ button {
     outline: none;
   }
 }
+
 .pomodoro {
   display: flex;
   flex-direction: column;
   align-items: center;
-  h1 {
-    margin: 0;
-    font-size: 5rem;
-  }
-  h2 {
-    font-family: "Raleway", sans-serif;
-    font-weight: 800;
-  }
-  h1,
-  h2 {
-    color: $grBlue;
+
+  .title {
+    margin: rem(33px);
   }
 }
 .navigation {
@@ -84,7 +90,7 @@ button {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  margin-bottom: rem(100px);
+  margin-bottom: rem(70px);
   background: -webkit-linear-gradient(
     left top,
     hsl(232, 41%, 10%) 0%,

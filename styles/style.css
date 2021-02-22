@@ -1,3 +1,19 @@
+h1 {
+  margin: 0;
+  font-size: 5rem;
+}
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  margin: 0;
+}
+
+h1,
+h2 {
+  color: #e7ebfd;
+}
+
 body {
   background-color: #212545;
 }
@@ -29,19 +45,8 @@ button:focus {
           align-items: center;
 }
 
-.pomodoro h1 {
-  margin: 0;
-  font-size: 5rem;
-}
-
-.pomodoro h2 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-}
-
-.pomodoro h1,
-.pomodoro h2 {
-  color: #e7ebfd;
+.pomodoro .title {
+  margin: 2.0625rem;
 }
 
 .navigation {
@@ -97,7 +102,7 @@ button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 6.25rem;
+  margin-bottom: 4.375rem;
   background: -webkit-linear-gradient(left top, #0f1224 0%, #323767 100%);
   -webkit-box-shadow: -20px -20px 50px -30px rgba(255, 255, 255, 0.19);
   box-shadow: -20px -20px 50px -30px rgba(255, 255, 255, 0.19);
