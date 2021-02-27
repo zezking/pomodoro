@@ -1,0 +1,119 @@
+$LtBlue: hsl(233, 35%, 20%);
+$DkBlue: hsl(232, 41%, 14%);
+$LtGreyBlue: hsl(231, 12%, 53%);
+$grBlue: hsl(229, 85%, 95%);
+$LtGrey: hsl(0, 0%, 77%);
+$pink: hsl(0, 91%, 71%);
+$paddingY: 3.125rem;
+$paddingX: 4.375rem;
+
+$html-font-size: 16px;
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+@function rem($pxValue) {
+  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+h1 {
+  margin: 0;
+  font-size: 5rem;
+}
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  margin: 0;
+}
+h1,
+h2 {
+  color: $grBlue;
+}
+body {
+  background-color: $LtBlue;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  i {
+    color: $LtGrey;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.pomodoro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    margin: rem(33px);
+  }
+}
+.navigation {
+  display: flex;
+  background: $DkBlue;
+  width: 20rem;
+  height: 3.75rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  margin-bottom: rem(50px);
+
+  a {
+    font-size: 0.7rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    color: $LtGreyBlue;
+    text-decoration: none;
+    border-radius: 60px;
+    padding: rem(14px) rem(16px);
+    transition: background-color 300ms;
+    &:visited {
+      color: none;
+    }
+    &:hover {
+      background-color: $pink;
+      opacity: 1;
+      color: $DkBlue;
+    }
+  }
+}
+.clockPanel {
+  margin: 0px;
+  display: flex;
+  height: rem(300px);
+  width: rem(300px);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: rem(70px);
+  background: -webkit-linear-gradient(
+    left top,
+    hsl(232, 41%, 10%) 0%,
+    hsl(234, 35%, 30%) 100%
+  );
+  -webkit-box-shadow: -20px -20px 50px -30px rgba(255, 255, 255, 0.19);
+  box-shadow: -20px -20px 50px -30px rgba(255, 255, 255, 0.19);
+  .innerPanel {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    height: rem(265px);
+    width: rem(265px);
+    border-radius: 50%;
+    background-color: $DkBlue;
+  }
+}
+.pause {
+  display: flex;
+  font-weight: 500;
+  color: $grBlue;
+  letter-spacing: 14px;
+  margin-left: 0.8rem;
+  justify-content: center;
+}
