@@ -7,4 +7,4 @@
 - Sass
 - HTML
 - Javascript
-- JQuery
+- React
