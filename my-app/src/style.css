@@ -32,7 +32,7 @@ button:focus {
   outline: none;
 }
 
-.pomodoro {
+#root {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,7 +45,7 @@ button:focus {
           align-items: center;
 }
 
-.pomodoro .title {
+#root .title {
   margin: 2.0625rem;
 }
 
